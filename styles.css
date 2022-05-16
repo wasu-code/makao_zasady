@@ -8,6 +8,10 @@ body {
     color: white;
 }
 
+.cardbox {
+    text-align: center;
+}
+
 /*body a {
             color: #ffffff;
             text-decoration: none;
