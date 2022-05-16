@@ -33,7 +33,7 @@ body {
         height: 60vw;
     }
     .card-back {
-        font-size: 0.5;
+        font-size: 0.5em;
     }
     .card-back h2 {
         font-size: 2em;
