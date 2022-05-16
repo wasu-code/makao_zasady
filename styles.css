@@ -29,8 +29,15 @@ body {
 
 @media (pointer: coarse) {
     .card {
-        height: auto;
-        width: 48%;
+        width: 40vw;
+        height: 60vw;
+    }
+    .card-back h2 {
+        font-size: 1em;
+    }
+    
+    .card-back h2 span {
+        font-size: 0.5em;
     }
 }
 
