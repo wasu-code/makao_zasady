@@ -1,0 +1,347 @@
+<head>
+    <style>
+        @import "https://fonts.googleapis.com/css?family=Josefin+Sans:400,700";
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Josefin Sans", sans-serif;
+            background-color: #333;
+            color: white;
+        }
+
+        /*body a {
+            color: #ffffff;
+            text-decoration: none;
+        }*/
+
+        .card {
+            display: inline-block;
+            margin: 0.3em;
+            /*position: absolute;*/
+            /*top: 50%;
+            left: 50%;*/
+            height: 340px;
+            width: 226px;
+            /*transform: translate(-50%, -50%);*/
+            transform-style: preserve-3d;
+            perspective: 600px;
+            transition: 0.5s;
+        }
+
+        .card:hover .card-front {
+            transform: rotateX(-180deg);
+        }
+
+        .card:hover .card-back {
+            transform: rotateX(0deg);
+        }
+
+        .card-front {
+            height: 100%;
+            width: 100%;
+            /*background-image: url(https://cdn.pixabay.com/photo/2015/08/11/11/56/spades-884178_960_720.png);
+            */
+            background-position: 50% 50%;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            /*background-color: #000000;*/
+            backface-visibility: hidden;
+            transform: rotateX(0deg);
+            transition: 0.5s;
+            border-radius: 25px;
+            border: 5px solid black;
+        }
+
+        .card-back {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #ffffff;
+            backface-visibility: hidden;
+            transform: rotateX(180deg);
+            transition: 0.5s;
+            color: #000000;
+            text-align: center;
+            border-radius: 25px;
+            border: 5px solid black;
+            
+        }
+
+        .card-back h2 {
+            margin: 30% auto 25% auto;
+            font-size: 26px;
+        }
+
+        .card-back h2 span {
+            font-size: 16px;
+        }
+
+        .card-back li {
+            text-align: left;
+            padding-left: 1em;
+            padding-right: .5em;
+        }
+
+        /*.card-back a {
+            height: 20px;
+            width: 20px;
+            padding: 5px 5px;
+            border-radius: 4px;
+            line-height: 20px;
+        }*/
+
+        .card-back a:hover {
+            color: #000000;
+            background-color: #fff;
+        }
+
+        .sticky-top {
+            color: #fff;
+            background-color: #333;
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+
+
+        
+        #c2{
+            background-image: url(https://cdn.pixabay.com/photo/2015/08/11/11/56/spades-884151_960_720.png);
+        }
+        #c3{
+            background-image: url(https://cdn.pixabay.com/photo/2015/08/11/11/56/diamonds-884153_960_720.png);
+        }
+        #c4{
+            background-image: url(https://cdn.pixabay.com/photo/2015/08/11/11/56/clubs-884156_960_720.png);
+        }
+        #c5{
+            background-image: url(https://cdn.pixabay.com/photo/2015/08/11/11/56/hearts-884163_960_720.png);
+        }
+        #c6{
+            background-image: url(https://cdn.pixabay.com/photo/2015/08/11/11/56/spades-884170_960_720.png);
+        }
+        #c7{
+            background-image: url(https://cdn.pixabay.com/photo/2015/08/11/11/56/diamonds-884172_960_720.png);
+        }
+        #c8{
+            background-image: url(https://cdn.pixabay.com/photo/2015/08/11/11/56/clubs-884175_960_720.png);
+        }
+        #c9{
+            background-image: url(https://cdn.pixabay.com/photo/2015/08/11/11/56/diamonds-884180_960_720.png);
+        }
+        #c10{
+            background-image: url(https://cdn.pixabay.com/photo/2015/08/11/11/55/clubs-884144_960_720.png);
+        }
+        #c11{
+            background-image: url(https://cdn.pixabay.com/photo/2015/08/11/11/57/hearts-884186_960_720.png);
+        }
+        #cJ{
+            background-image: url(https://cdn.pixabay.com/photo/2015/08/11/11/57/clubs-884188_960_720.png);
+        }
+        #cQ{
+            background-image: url(https://cdn.pixabay.com/photo/2015/08/11/11/57/diamonds-884199_960_720.png);
+        }
+        #cK-karo{
+            background-image: url(https://cdn.pixabay.com/photo/2015/08/11/11/57/diamonds-884195_960_720.png);
+        }
+        #cK-trefl{
+            background-image: url(https://cdn.pixabay.com/photo/2015/08/11/11/57/clubs-884194_960_720.png);
+        }
+        #cK-kier{
+            background-image: url(https://cdn.pixabay.com/photo/2015/08/11/11/57/hearts-884196_960_720.png);
+        }
+        #cK-pik{
+            background-image: url(https://cdn.pixabay.com/photo/2015/08/11/11/57/spades-884197_960_720.png);
+        }
+        #cJok{
+            background-image: url();
+        }
+
+    </style>
+</head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
+<div class="sticky-top">
+    ♠️-pik | ♣️-trefl | ♥️-kier | ♦️-karo
+</div>
+<br>
+<ul>
+    <li>Standardowa gra kończy się po tym jak jeden gracz pozbędzie się wszystkich kart</li>
+    (Grę można utrudnić pozwalając na kontynuację gry (jeśli ostatnia karta jest waleczna))
+    <li>Asem można zmienić żądanie nawet po rzuceniu już jakiejś karty, pod warunkiem, że zgadza się kolor asa i
+        rzuconej karty</li>
+    <li>Można rzucać takie same cyfry, pod warunkiem, że są co najmniej trzy. Mogą być różnych kolorów</li>
+    <li>Można rzucać kolejne cyfry, pod warunkiem, że sa co najmniej trzy. Musza być tego samego koloru</li>
+    <li>Jeśli ostatnią kartą gracza jest karta waleczna to inni gracze mogą kontynuować grę używając kart
+        walecznych, aż wróci do osoby, która pozbyła się wszystkich kart, przez musi dobierać.</li>
+</ul>
+<br>
+
+<div class="card">
+    <div class="card-front" id="c2"></div>
+    <div class="card-back">
+        <h2>Dwójka<br><span>(wszystkie)</span></h2>
+        <li>Dobierasz dwie karty</li>
+        <li>Mogą się stackować pozostając walecznymi kartami</li>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-front" id="c3"></div>
+    <div class="card-back">
+        <h2>Trójki<br><span>(wszystkie)</span></h2>
+        <li>Dobierasz trzy karty</li>
+        <li>Mogą się stackować pozostając walecznymi kartami</li>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-front" id="c4"></div>
+    <div class="card-back">
+        <h2>Czwórki<br><span>(wszystkie)</span></h2>
+        <li>Czekasz kolejkę</li>
+        <li>Mogą się stackować pozostając walecznymi kartami</li>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-front" id="c5"></div>
+    <div class="card-back">
+        <h2>Piątki<br><span>(wszystkie)</span></h2>
+        Te karty nic nie robią
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-front" id="c6"></div>
+    <div class="card-back">
+        <h2>Szóstki<br><span>(wszystkie)</span></h2>
+        Te karty nic nie robią
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-front" id="c7"></div>
+    <div class="card-back">
+        <h2>Siódemki<br><span>(wszystkie)</span></h2>
+        Te karty nic nie robią
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-front" id="c8"></div>
+    <div class="card-back">
+        <h2>Ósemki<br><span>(wszystkie)</span></h2>
+        Te karty nic nie robią
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-front" id="c9"></div>
+    <div class="card-back">
+        <h2>Dziewiątki<br><span>(wszystkie)</span></h2>
+        Te karty nic nie robią
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-front" id="c10"></div>
+    <div class="card-back">
+        <h2>Dziesiątki<br><span>(wszystkie)</span></h2>
+        Te karty nic nie robią
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-front" id="c11"></div>
+    <div class="card-back">
+        <h2>Asy<br><span>(wszystkie)</span></h2>
+        <li>Żądanie koloru</li>
+        <li>Obowiązuje całą kolejkę, bez osoby żądającej</li>
+        <li>Postakowane przestają być waleczne</li>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-front" id="cJ"></div>
+    <div class="card-back">
+        <h2>Jopki<br><span>(wszystkie)</span></h2>
+        <li>Żądanie cyfry (lub damy)</li>
+        <li>Postakowane przestają być waleczne</li>
+        <li>Obowiązuje calą kolejkę, bez żądającego</li>
+        <li>Nie można żądać walecznych kart</li>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-front" id="cQ"></div>
+    <div class="card-back">
+        <h2>Damy<br><span>(wszystkie)</span></h2>
+        Te karty nic nie robią
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-front" id="cK-karo"></div>
+    <div class="card-back">
+        <h2>Król Karo<br><span>( ♦️ )</span></h2>
+        Ta karta nic nie robi
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-front" id="cK-trefl"></div>
+    <div class="card-back">
+        <h2>Król Trefl<br><span>( ♣️ )</span></h2>
+        Ta karta nic nie robi
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-front" id="cK-kier"></div>
+    <div class="card-back">
+        <h2>Król Kier<br><span>( ♥️ )</span></h2>
+        <li><b>Następna</b> osoba dobiera 5 kart</li>
+        <li>Satck'ują się jako waleczne</li>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-front" id="cK-pik"></div>
+    <div class="card-back">
+        <h2>Król Pik<br><span>( ♠️ )</span></h2>
+        <li><b>Poprzednia</b> osoba dobiera 5 kart</li>
+        <li>Satck'ują się jako waleczne</li>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-front" id="cJok"></div>
+    <div class="card-back">
+        <h2>wasu<br><span>(autor)</span></h2>
+        Ta karta jest po prostu zaj***sta
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://pixabay.com/pl/users/wikimediaimages-1185597/?tab=latest&pagi=38
