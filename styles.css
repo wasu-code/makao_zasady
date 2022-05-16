@@ -32,12 +32,15 @@ body {
         width: 40vw;
         height: 60vw;
     }
+    .card-back {
+        font-size: 0.5;
+    }
     .card-back h2 {
         font-size: 1em;
     }
     
     .card-back h2 span {
-        font-size: 0.5em;
+        font-size: 0.2em;
     }
 }
 
