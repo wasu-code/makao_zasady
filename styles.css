@@ -21,17 +21,16 @@ body {
             left: 50%;*/
     height: 340px;
     width: 226px;
-    max-width: 50%;
     /*transform: translate(-50%, -50%);*/
     transform-style: preserve-3d;
     perspective: 600px;
     transition: 0.5s;
 }
 
-@media only screen and (max-width: 600px) {
+@media (pointer: coarse) {
     .card {
-        height: 170px;
-        width: 113px;
+        height: auto;
+        width: 48%;
     }
 }
 
