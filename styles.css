@@ -36,11 +36,11 @@ body {
         font-size: 0.5;
     }
     .card-back h2 {
-        font-size: 1em;
+        font-size: 2em;
     }
     
     .card-back h2 span {
-        font-size: 0.2em;
+        font-size: 0.5em;
     }
 }
 
