@@ -4,26 +4,29 @@
     <link rel="icon" type="image/svg" href="https://twemoji.maxcdn.com/v/latest/svg/1f0cf.svg" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="backgrounds.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <title>Makao - zasady</title>
-
 </head>
 
 <body>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-
     <div class="sticky-top">
         ♥️-kier |♠️-pik | ♦️-karo | ♣️-trefl
     </div>
     <br>
-    <ul>
-        <li>Standardowa gra kończy się po tym jak jeden gracz pozbędzie się wszystkich kart</li>
-        (Grę można utrudnić pozwalając na kontynuację gry (jeśli ostatnia karta jest waleczna))
-        <li>Asem można zmienić żądanie nawet po rzuceniu już jakiejś karty, pod warunkiem, że zgadza się kolor asa i
-            rzuconej karty</li>
-        <li>Można rzucać takie same cyfry, pod warunkiem, że są co najmniej trzy. Mogą być różnych kolorów</li>
-        <li>Można rzucać kolejne cyfry, pod warunkiem, że sa co najmniej trzy. Musza być tego samego koloru</li>
-        <li>Jeśli ostatnią kartą gracza jest karta waleczna to inni gracze mogą kontynuować grę używając kart
-            walecznych, aż wróci do osoby, która pozbyła się wszystkich kart, przez musi dobierać.</li>
+    <ul class="rulelist">
+        <li>Standardowa gra kończy się po tym jak jeden gracz <b>pozbędzie się wszystkich kart.</b></li>
+        <li>Grę można utrudnić pozwalając na kontynuację gry jeśli ostatnia karta gracza jest kartą waleczną:<br />
+            Jeśli ostatnią kartą gracza jest karta waleczna to inni gracze mogą kontynuować grę używając kart
+            walecznych, aż wróci do osoby, która pozbyła się wszystkich kart, przez co musi dobierać. Jeśli dobiera inna
+            osoba, osoba bez kart kończy grę</li>
+        <li><b>Asem</b> można zmienić żądanie nawet po rzuceniu już jakiejś karty, pod warunkiem, że zgadza się kolor
+            asa i rzuconej karty.</li>
+        <li>Można rzucać <b>takie same cyfry</b>, pod warunkiem, że są <b>co najmniej trzy</b>. Mogą być różnych
+            kolorów.</li>
+        <li>Można rzucać <b>kolejne cyfry</b>, pod warunkiem, że sa <b>co najmniej trzy</b>. Musza być <b>tego samego
+                koloru.</b></li>
+        <li>Podczas żądania (na przykład na kolor) można rzucić kartę waleczną, ale nie funkcjonyje ona wtedy jako karta
+            waleczna (działa jak zwykła karta bez funkcji).</li>
     </ul>
     <br>
 
@@ -32,8 +35,8 @@
             <div class="card-front" id="c2"></div>
             <div class="card-back">
                 <h2>Dwójka<br><span>♥️♠️♦️♣️</span></h2>
-                <li>Dobierasz dwie karty</li>
-                <li>Mogą się stackować pozostając walecznymi kartami</li>
+                <li>Dobierasz <b>dwie karty</b></li>
+                <li>Mogą się stack'ować pozostając walecznymi kartami</li>
             </div>
         </div>
 
@@ -41,8 +44,8 @@
             <div class="card-front" id="c3"></div>
             <div class="card-back">
                 <h2>Trójki<br><span>♥️♠️♦️♣️</span></h2>
-                <li>Dobierasz trzy karty</li>
-                <li>Mogą się stackować pozostając walecznymi kartami</li>
+                <li>Dobierasz <b>trzy karty</b></li>
+                <li>Mogą się stack'ować pozostając walecznymi kartami</li>
             </div>
         </div>
 
@@ -50,8 +53,8 @@
             <div class="card-front" id="c4"></div>
             <div class="card-back">
                 <h2>Czwórki<br><span>♥️♠️♦️♣️</span></h2>
-                <li>Czekasz kolejkę</li>
-                <li>Mogą się stackować pozostając walecznymi kartami</li>
+                <li><b>Czekasz kolejkę</b></li>
+                <li>Mogą się stack'ować pozostając walecznymi kartami</li>
             </div>
         </div>
 
@@ -107,7 +110,7 @@
             <div class="card-front" id="c11"></div>
             <div class="card-back">
                 <h2>Asy<br><span>♥️♠️♦️♣️</span></h2>
-                <li>Żądanie koloru</li>
+                <li><b>Żądanie koloru (symbolu)</b></li>
                 <li>Obowiązuje całą kolejkę, bez osoby żądającej</li>
                 <li>Postakowane przestają być waleczne</li>
             </div>
@@ -117,9 +120,9 @@
             <div class="card-front" id="cJ"></div>
             <div class="card-back">
                 <h2>Jopki<br><span>♥️♠️♦️♣️</span></h2>
-                <li>Żądanie cyfry (lub damy)</li>
+                <li><b>Żądanie cyfry</b> (lub damy)</li>
+                <li>Obowiązuje calą kolejkę, bez osoby żądającej</li>
                 <li>Postakowane przestają być waleczne</li>
-                <li>Obowiązuje calą kolejkę, bez żądającego</li>
                 <li>Nie można żądać walecznych kart</li>
             </div>
         </div>
@@ -152,8 +155,8 @@
             <div class="card-front" id="cK-kier"></div>
             <div class="card-back">
                 <h2>Król Kier<br><span>♥️</span></h2>
-                <li><b>Następna</b> osoba dobiera 5 kart</li>
-                <li>Satck'ują się jako waleczne</li>
+                <li><b>Następna</b> osoba dobiera <b>5 kart</b></li>
+                <li>Mogą się stack'ować pozostając walecznymi kartami</li>
             </div>
         </div>
 
@@ -161,8 +164,8 @@
             <div class="card-front" id="cK-pik"></div>
             <div class="card-back">
                 <h2>Król Pik<br><span>♠️</span></h2>
-                <li><b>Poprzednia</b> osoba dobiera 5 kart</li>
-                <li>Satck'ują się jako waleczne</li>
+                <li><b>Poprzednia</b> osoba dobiera <b>5 kart</b></li>
+                <li>Mogą się stack'ować pozostając walecznymi kartami</li>
             </div>
         </div>
 
@@ -170,7 +173,7 @@
             <div class="card-front" id="cJok"></div>
             <div class="card-back">
                 <h2>Joker<br><span>♥️♠️♦️♣️</span></h2>
-                Może służyć jako dowolna karta.
+                <li>Może służyć jako <b>dowolna karta</b></li>
             </div>
         </div>
 
@@ -178,8 +181,8 @@
             <div class="card-front" id="cEND"></div>
             <div class="card-back">
                 <h2>wasu<br><span>(autor)</span></h2>
-                Made with ♥️ by wasu<br><br>
-                <a href="https://pixabay.com/pl/users/wikimediaimages-1185597/?tab=latest&pagi=38">images source</a>
+                Made with ♥️(kier) by wasu<br><br><br>
+                <a href="https://pixabay.com/pl/users/wikimediaimages-1185597/?tab=latest&pagi=38">źródło obrazów</a>
             </div>
         </div>
     </div>

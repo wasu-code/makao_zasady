@@ -1,5 +1,9 @@
 @import "https://fonts.googleapis.com/css?family=Josefin+Sans:400,700";
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -8,14 +12,17 @@ body {
     color: white;
 }
 
+.rulelist {
+    margin-right: 3em;
+}
+
+.rulelist>li {
+    margin-top: 1em;
+}
+
 .cardbox {
     text-align: center;
 }
-
-/*body a {
-            color: #ffffff;
-            text-decoration: none;
-        }*/
 
 .card {
     display: inline-block;
